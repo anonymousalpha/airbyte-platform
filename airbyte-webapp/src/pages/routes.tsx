@@ -12,6 +12,7 @@ import { useCurrentWorkspace } from "hooks/services/useWorkspace";
 import { CompleteOauthRequest } from "views/CompleteOauthRequest";
 import MainView from "views/layout/MainView";
 
+import { Playground } from "./playground";
 import { RoutePaths, DestinationPaths, SourcePaths } from "./routePaths";
 import { WorkspaceRead } from "../core/request/AirbyteClient";
 
@@ -51,6 +52,7 @@ const MainViewRoutes: React.FC = () => {
     <MainView>
       <ApiErrorBoundary>
         <Routes>
+          <Route path="/play-ground" element={<Playground />} />
           <Route path={RoutePaths.Destination}>
             <Route index element={<AllDestinationsPage />} />
             <Route path={DestinationPaths.SelectDestinationNew} element={<SelectDestinationPage />} />

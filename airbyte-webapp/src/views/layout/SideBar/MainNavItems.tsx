@@ -19,7 +19,7 @@ export const MainNavItems: React.FC = () => {
         to={RoutePaths.Connections}
         testId="connectionsLink"
       />
-
+      <NavItem label="PlayGround" icon={<SourceIcon />} to="/play-ground" testId="sourcesLink" />
       <NavItem
         label={<FormattedMessage id="sidebar.sources" />}
         icon={<SourceIcon />}
